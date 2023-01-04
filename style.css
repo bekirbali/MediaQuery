@@ -33,6 +33,10 @@ header img {
   width: 200px;
 }
 
+.btn-sec {
+  display: flex;
+}
+
 button {
   border: 2px solid darkred;
   border-radius: 0.3rem;
@@ -41,16 +45,34 @@ button {
   font-family: "East Sea Dokdo";
   font-size: 1.4rem;
   margin-left: 0.5rem;
+  transition: all ease-in-out 0.2s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 .btn-light {
-  background-color: white;
+  background-color: #fcfbfb;
   color: darkred;
+}
+
+.btn-light:active {
+  background-color: white;
 }
 
 .btn-dark {
   background-color: darkred;
   color: white;
+}
+
+.btn-dark:active {
+  background-color: rgb(160, 9, 9);
 }
 
 nav.hero {
@@ -74,6 +96,11 @@ nav.hero img {
 .left-sec-1 button {
   width: 65%;
   padding: 1rem 1.5rem;
+}
+
+.left-sec-1 button a {
+  color: white;
+  text-decoration: none;
 }
 
 nav.hero h1 {
@@ -113,4 +140,78 @@ main section.card article {
 
 main .card:nth-child(odd) {
   flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+  header img {
+    width: 300px;
+  }
+  button {
+    margin: 0;
+  }
+  .btn-sec {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  nav.hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  nav.hero .left-sec-1 {
+    justify-content: center;
+    align-items: center;
+  }
+  main .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .card:nth-child(odd) {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav.hero .left-sec-1 .btn-dark {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+  header img {
+    width: 300px;
+  }
+  button {
+    margin: 0;
+  }
+  .btn-sec {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  nav.hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  nav.hero .left-sec-1 {
+    justify-content: center;
+    align-items: center;
+  }
+  main .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .card:nth-child(odd) {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav.hero .left-sec-1 .btn-dark {
+    width: auto;
+  }
 }
